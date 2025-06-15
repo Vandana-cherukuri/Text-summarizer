@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Summarizer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <h1 class="animate__animated animate__bounce">Text Summarizer</h1>
+    <form method="POST">
+      <textarea name="text" placeholder="Paste your text here..." required></textarea>
+      <br>
+      <button type="submit">Summarize</button>
+    </form>
+    {% if summary %}
+    <div class="result animate__animated animate__fadeIn">
+      <h3>Summary:</h3>
+      <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
